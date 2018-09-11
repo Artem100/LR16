@@ -7,7 +7,7 @@
 
     <test name="TestOfListeners">
         <classes>
-            <class name="tests.SomeTest"/>
+            <class name="tests.LoginTestJira"/>
         </classes>
     </test>
 
