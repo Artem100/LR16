@@ -35,5 +35,5 @@ public class LoginPage {
 
     public void passwordField(String password){ elPasswordField.sendKeys(password);}
 
-    public void loginButton(){ event1.afterClickOn(elButtonLogin);}
+    //public void loginButton(){ event1.afterClickOn(elButtonLogin);}
 }
