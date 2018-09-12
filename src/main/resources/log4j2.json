@@ -1,12 +1,23 @@
 {
   "configuration": {
-    "status": "error",
-    "name": "JSONConfigDemo",
-    "packages": "com.howtodoinjava",
-    "ThresholdFilter": {
-      "level": "debug"
-    },
+    "name": "Default",
     "appenders": {
+      "RollingFile": {
+        "name": "File",
+        "fileName": "logs/LR16.log",
+        "filePattern": "logs/LR16-backup-%d{MM-dd-yy-HH-mm-ss}-%i.log.gz",
+        "PatternLayout": {
+          "pattern": "%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n"
+        },
+        "Policies": {
+          "SizeBasedTriggeringPolicy": {
+            "size": "10 MB"
+          }
+        },
+        "DefaultRolloverStrategy": {
+          "max": "10"
+        }
+      },
       "Console": {
         "name": "STDOUT",
         "PatternLayout": {
@@ -16,10 +27,10 @@
     },
     "loggers": {
       "root": {
-        "level": "debug",
-        "AppenderRef": {
-          "ref": "STDOUT"
-        }
+        "level":"debug",
+        "appender-ref":[ {
+          "ref":"File", "level":"debug"},{"ref":"STDOUT", "level":"debug"}
+        ]
       }
     }
   }
