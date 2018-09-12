@@ -4,8 +4,8 @@
     "appenders": {
       "RollingFile": {
         "name": "File",
-        "fileName": "logs/LR16.log",
-        "filePattern": "logs/LR16-backup-%d{MM-dd-yy-HH-mm-ss}-%i.log.gz",
+        "fileName": "src/test/java/logs/LR16.log",
+        "filePattern": "src/test/java/logs/LR16-backup-%d{MM-dd-yy-HH-mm-ss}-%i.log.gz",
         "PatternLayout": {
           "pattern": "%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n"
         },
