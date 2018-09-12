@@ -26,6 +26,7 @@ public class SomeTest {
 
     @Test
     public void testCase1(){
+
         System.out.println("Test1");
     }
 
